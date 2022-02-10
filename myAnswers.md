@@ -1,4 +1,5 @@
-<!-- <!-- DAY 1: 07/02/22
+<!--
+ DAY 1: 07/02/22
 
 ### Q1
 
@@ -134,7 +135,7 @@ let num = 10;
 let num1 = 2;
 
 myFunction(num1, num);
-``` -->
+```
 
 DAY 2: 08/02/22
 Q6:
@@ -260,3 +261,138 @@ I expect the console to display ... 20. My prediction is based on first arg call
 
 Answer was 100... I got it incorrect ❌
 😕 super confused
+
+DAY 3 - 09/02/22
+
+### Q11
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1, num2, num3) {
+  return num1 + num2 + num3;
+}
+
+const num1 = 10;
+const num2 = 1;
+const num3 = 20;
+
+const result = myFunction(1, 1, 1);
+```
+
+Q11:
+
+Step 1: function takes 3 args - number datatype
+Step2: function adds 3 nums.
+Step 3: function will return something (return keyword isused)
+Step 4: 3 variables has been declared and assigned to values
+Step 5: function is called with 3 nums - not with the variavles created - and the its value is stored in the var result.
+
+I expect var result to hold 3 because the code will first add the 2 numbers and then add to 3rd number (1+1=2+1=3?) result should equal to 3
+I got it correct ✔ 👍
+
+### Q12
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function getSomeValue() {
+  return 2;
+}
+
+function myFunction(num1) {
+  const num2 = getSomeValue();
+  return num1 * num2;
+}
+
+const result = myFunction(5);
+```
+
+Q12:
+
+step 1: the first function (getSomeValue) returns 2 (holds value of digit 2) and takes no args
+step 2: the second function (myfunction) takes a single arg
+step 3: inside myfunction the first func is called and its value is stored in var (num2)
+step 4: the function returns a value of two digits multiplied
+step 5: myfunc is invoked with arg (5)and its results is stored in var result
+
+I expect result to be 2\*5 = 10
+Got it correct ✔👍
+
+### Q13
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function getSomeValue() {
+  return 2;
+}
+
+function myFunction(num1) {
+  const num2 = getSomeValue();
+  return num1 * getSomeValue();
+}
+
+const result = myFunction(5);
+```
+
+Q13:
+
+I expect var result to procduce same value as q12 as everything is the same exept the getsomevalue is called twice inside the myfun but this does not make any diffrence to the results as we're ony using it once - directly
+
+I was spot on ✔👌 the aswer was 10 - 2\*5 = 10
+
+### Q14
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function getSomeValue() {
+  return 2;
+}
+
+function myFunction(num1) {
+  return getSomeValue() * getSomeValue();
+}
+
+const result = myFunction(5);
+```
+
+Q14:
+
+step 1: the getsomevalue func returns number 2 everytime its invoked
+step 2: the myfunction is declared and takes single arg
+step 3: the return keyword is returning a sum of 2\*2 because it's multpying the getsome func
+step 4: the myfunction is invoked with arg of number 5 but it will not do anything as the arg has not been used in the expression inside the func
+
+I expect the ressult variable to equal to 4 - 2\*2 = 4
+
+I was correct! ✔
+
+### Q15
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1) {
+  if (true) {
+    return -10;
+  }
+
+  return num1 * 10;
+}
+
+const result = myFunction(5);
+```
+
+Q15:
+
+Step 1: myfunction is declared and takes 1 arg
+step 2: the condition in the if statement seems incomplete to me (if what is true? It's not comparing anything). It would make sense to me if it was phrased if(num1 === -10){return true}. But if this is a valid conditional statement then I expect it to mean: if the arg passed into the func is -10 then return true.
+step 3: the value of the 'return num1 \* 10' is expected to return if the first condition is false.
+step 4: the function is called with an arg of number 5
+
+I expect the result to be: 5\*10 = 50
+
+Got it incorrect ❌
+The answer was -10
