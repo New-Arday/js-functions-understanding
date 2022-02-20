@@ -1,5 +1,4 @@
-<!--
- DAY 1: 07/02/22
+DAY 1: 07/02/22
 
 ### Q1
 
@@ -205,10 +204,10 @@ step 1: function takes 2 args - dataType Nums
 step 2: adds two nums
 step 3: it returns a value because the return keyword is used
 step 4: three variable has been initialised each holding a diffrent values of nums
-atep 5: the function is invoked with two args and the value of the function is stored in the 'result' variable.
+atep 5: the function is invoked with two args and the value of the function is stored in the 'result' variable. -->
 I expect the result to be 4+10 = 14. -->
 
-Yes!!!!!!! I got it correct - my maths is getting strong
+Yes, I got it correct - my maths is getting strong!
 I based my prediction on the what I learnt from Q6.
 
 ### Q9
@@ -396,3 +395,221 @@ I expect the result to be: 5\*10 = 50
 
 Got it incorrect ❌
 The answer was -10
+
+### Q16
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1) {
+  if (false) {
+    return -100;
+  }
+
+  return num1 * 10;
+}
+
+const result = myFunction(5);
+```
+
+Q16:
+
+Function takes a single arg - num
+The if statement condition is set to false this which means the func will return the 2nd return
+expected result is 50 - 5\*10 - arrived to this conclution based on the previous question (q15)
+
+I was correct! ✔
+my understanding is: 5/10
+Lewis explained it on the function understanding channel but I didn't fully get it.
+
+### Q17
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1) {
+  return -100;
+
+  return num1 * 10;
+}
+
+const result = myFunction(5);
+```
+
+Q17:
+
+This func accepts 1 arg - num
+It has two returns with out condition seperating them; I suspect the func will return the first return OR the console will throw an error
+
+I'm leaning more towards a return of -100
+My inkling was correct! ✔✔✔ Result is -100
+
+### Q18
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1) {
+  return num1 * 10;
+
+  return -100;
+}
+
+const result = myFunction(5);
+```
+
+Q18:
+
+Function take 1 arg - num
+The func will return the first return
+Super confident that the result will be 50- 5\*10 as functions stop running, once it return the first return.
+Got it correct ✔
+
+### Q19
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1, num2, num3) {
+  return num2;
+}
+
+const result = myFunction(5, 10, 15);
+```
+
+Q19:
+Functon takes 3 args - nums
+it returns a single arg
+The func is invoked with 3 args and its value is assigned to the result car.
+
+With reservations, I suspect the result to be: 5
+
+Got it incorrect - the result is 10; I think I understand why the answer is 10 ( the arg of the input matches with the return placeholder) ❌
+
+### Q20
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1, num2, num3) {
+  return num1 + num3;
+}
+
+const num1 = 20;
+const num2 = 200;
+const num3 = 1000;
+
+const result = myFunction(5, 10, num3, 15);
+```
+
+Q20:
+
+The function takes 3 args - nums
+It add 2 numbers
+The func is called with 4 args, one of them being a var which has a value of 1000
+
+I think the answer will be: 5+1000
+Was correct, result is 1005 ✔
+
+### Q21
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1, num2) {
+  const result = num1 + num2;
+  return result;
+}
+
+const result = myFunction(10, 20);
+myFunction(100, 2);
+```
+
+Q21:
+
+Function take 2 args
+result var is declared and is set add 2 args
+The func returns the var result
+
+The function is called twice - first time, a var (result) is declared and holds its value (10+20 = 30) AND the secondtime, the func is called with 2 args - 100 and 2
+
+I'm expecting the console to display two value:
+1 - the result = 30
+2 - 102
+My Prediction was spot on for both - I'm getting really good at my maths!🥳
+
+### Q22
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1, num2) {
+  let result = num1 + num2;
+  return result;
+}
+
+let result = 0;
+myFunction(100, 2);
+```
+
+Q22:
+
+Function takes 2 args
+Inside the func, a result name is declared with the 'let' var and it adds 2 values
+The func returns the value of result var
+
+Outside the func, a result name is declared with the 'let' and is set to 0
+Lastly, the func is called with 2 args - 100 & 2
+
+The result variable will remain 0
+When I console log the myFunction(100, 2), I'm expecting its value to be: 100+2 = 102
+
+Easy-peasy, got it correct✔✔
+
+### Q23
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1, num2) {
+  result = num1 + num2;
+}
+
+let result = 0;
+myFunction(100, 2);
+```
+
+1 -function takes 2 args
+2 -inside the func, undeclared result name is supposedly set to add up 2 nums
+3 -a result name is declared with the 'let' and is set to 0
+4- the func is invoked with two nums - 100 & 2
+
+I'm feelinbg 50 50 here; when I console log the myFunction(100, 2), I'm expecting nothing in return as the keyword return was not used. Having said that, I also acknowlege the expression inside the func (despite its invalid assignment )
+Will take a leap and expect the answer to be nothing.
+The result variable will remain 0 ✔
+Got an undefined - I think I was correct? if undefined and nothingness means the same thing?
+
+### Q24
+
+What will be the value of `result` when this code runs? Why?
+
+```javascript
+function myFunction(num1, num2) {
+  const result = num1 + num2;
+  return 100;
+}
+
+const result = myFunction(5, 2);
+```
+
+Function takes 2 args
+const var (name result) is declared and holds an expression of adding 2 nums
+The return keyword is returning 100
+
+The function is called with two args and it's value is set to a const var (result)
+When I console log the var result, I expect the answer to be 100, despite the value logged in the result var, insode the func block. This is because the func will return what it's set to - and that is 100.
+The func args is valid and will sit inside the func unless the return key is set to the var result.
+
+CORRECT!!! Answer is 100 ✔✔✔
+
+Thanks for this exercise. I found parts of it easy and others confusing - such as question: 6, 10 and 15
